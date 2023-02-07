@@ -1,4 +1,4 @@
-# GlobalNetttttttt
+# GlobalNet
 
 ### - localhost:3000
 
