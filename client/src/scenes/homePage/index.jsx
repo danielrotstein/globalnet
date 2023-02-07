@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Navbar from "scenes/navbar";
+import Navbar from "../Navbar/index.jsx";
 
 const HomePage = () => {
     return (
