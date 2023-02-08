@@ -95,6 +95,7 @@ export const Form = () => {
                     token: loggedIn.token,
                 })
             );
+            navigate("/home");
         }
     };
 
