@@ -41,7 +41,7 @@ const LoginPage = () => {
                 >
                     Welcome to GlobalNet, the Social Media for Human Beings!
                 </Typography>
-                
+               
             </Box>
         </Box>
     )
