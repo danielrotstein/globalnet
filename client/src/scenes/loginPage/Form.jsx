@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import {
     Box,
@@ -12,9 +13,9 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setLogin } from "state";
+import { setLogin } from "../../state";
 import Dropzone from "react-dropzone";
-import FlexBetween from "components/FlexBetween";
+import FlexBetween from "../../components/FlexBetween";
 
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("required"),
@@ -46,7 +47,7 @@ const initialValuesLogin = {
     password: "",
 };
 
-export const Form = () => {
+const Form = () => {
     const [pageType, setPageType] = useState("login");
     const { palette } = useTheme();
     const dispatch = useDispatch();
@@ -282,3 +283,5 @@ export const Form = () => {
         </Formik>
     )
 };
+
+export default Form;

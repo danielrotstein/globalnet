@@ -5,7 +5,7 @@ import {
     useTheme,
     useMediaQuery,
 } from "@mui/material";
-// import Form from "../LoginPage";
+import Form from "../LoginPage/Form";
 
 const LoginPage = () => {
     const theme = useTheme();
@@ -41,7 +41,7 @@ const LoginPage = () => {
                 >
                     Welcome to GlobalNet, the Social Media for Human Beings!
                 </Typography>
-               
+               <Form />
             </Box>
         </Box>
     )
