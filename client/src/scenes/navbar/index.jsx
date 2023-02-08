@@ -1,26 +1,25 @@
 import React from "react";
 import { useState } from "react";
-import { 
-    Box,
-    IconButton,
-    InputBase,
-    Typography,
-    Select,
-    MenuItem,
-    FormControl,
-    useTheme,
-    useMediaQuery,
-    Icon,
+import {
+  Box,
+  IconButton,
+  InputBase,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import {
-    Search,
-    Message,
-    DarkMode,
-    LightMode,
-    Notifications,
-    Help,
-    Menu,
-    Close,
+  Search,
+  Message,
+  DarkMode,
+  LightMode,
+  Notifications,
+  Help,
+  Menu,
+  Close,
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../state";
@@ -32,18 +31,18 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const user = useSelector((state) => state.user);
-    const isNonMobileScreens = useMediaQuery("(min-width: 100px)");
-    
+    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+
     const theme = useTheme();
     const neutralLight = theme.palette.neutral.light;
     const dark = theme.palette.neutral.dark;
-    const background = theme.palette.background;
-    const primaryLight = theme.palette.primary.light;
+    const background = theme.palette.background.default;
+    const primaryLight = theme.palette.primary.main;
     const alt = theme.palette.background.alt;
 
     const fullName = user ? `${user.firstName} ${user.lastName}` : "tester";
 
-    return  (
+    return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
             <FlexBetween gap="1.75rem">
                 <Typography
@@ -53,18 +52,23 @@ const Navbar = () => {
                     onClick={() => navigate("/home")}
                     sx={{
                         "&:hover": {
-                            color: primaryLight,
-                            cursor: "pointer",
+                        color: primaryLight,
+                        cursor: "pointer",
                         },
                     }}
                 >
                     GlobalNet
                 </Typography>
                 {isNonMobileScreens && (
-                    <FlexBetween backgroundColor={neutralLight} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
+                    <FlexBetween
+                        backgroundColor={neutralLight}
+                        borderRadius="9px"
+                        gap="3rem"
+                        padding="0.1rem 1.5rem"
+                    >
                         <InputBase placeholder="Search..." />
                         <IconButton>
-                            <Search />
+                        <Search />
                         </IconButton>
                     </FlexBetween>
                 )}
@@ -75,9 +79,9 @@ const Navbar = () => {
                 <FlexBetween gap="2rem">
                     <IconButton onClick={() => dispatch(setMode())}>
                         {theme.palette.mode === "dark" ? (
-                            <DarkMode sx={{ fontSize: "25px" }} />
+                        <DarkMode sx={{ fontSize: "25px" }} />
                         ) : (
-                            <LightMode sx={{ color: dark, fontSize: "25px" }} />
+                        <LightMode sx={{ color: dark, fontSize: "25px" }} />
                         )}
                     </IconButton>
                     <Message sx={{ fontSize: "25px" }} />
@@ -92,12 +96,12 @@ const Navbar = () => {
                                 borderRadius: "0.25rem",
                                 p: "0.25rem 1rem",
                                 "& .MuiSvgIcon-root": {
-                                    pr: "0.25rem",
-                                    width: "3rem"                                
+                                pr: "0.25rem",
+                                width: "3rem",
                                 },
                                 "& .MuiSelect-select:focus": {
-                                    backgroundColor: neutralLight
-                                }
+                                backgroundColor: neutralLight,
+                                },
                             }}
                             input={<InputBase />}
                         >
@@ -137,15 +141,15 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
 
-                    {/* MENU ITEMS */}
-                    <FlexBetween 
-                        display="flex" 
-                        flexDirection="column" 
-                        justifyContent="center" 
-                        alignItems="center" 
+                {/* MENU ITEMS */}
+                    <FlexBetween
+                        display="flex"
+                        flexDirection="column"
+                        justifyContent="center"
+                        alignItems="center"
                         gap="3rem"
                     >
-                        <IconButton 
+                        <IconButton
                         onClick={() => dispatch(setMode())}
                         sx={{ fontSize: "25px" }}
                         >
@@ -168,11 +172,11 @@ const Navbar = () => {
                                     p: "0.25rem 1rem",
                                     "& .MuiSvgIcon-root": {
                                         pr: "0.25rem",
-                                        width: "3rem"                                
+                                        width: "3rem",
                                     },
                                     "& .MuiSelect-select:focus": {
-                                        backgroundColor: neutralLight
-                                    }
+                                        backgroundColor: neutralLight,
+                                    },
                                 }}
                                 input={<InputBase />}
                             >
@@ -188,7 +192,7 @@ const Navbar = () => {
                 </Box>
             )}
         </FlexBetween>
-    )
+    );
 };
 
 export default Navbar;
