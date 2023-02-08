@@ -28,6 +28,9 @@ export const colorTokens = {
       900: "#001519",
     },
   };
+
+ // EXTRA COLORS
+  // #ffa726 #F25E31 #673ab7
   
   // mui theme settings
   export const themeSettings = (mode) => {
