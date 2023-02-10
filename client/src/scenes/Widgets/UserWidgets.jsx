@@ -53,6 +53,43 @@ const UserWidget = ({ userId, picturePath }) => {
         impressions,
         friends,
     } = user;
+
+    return (
+        <WidgetWrapper>
+
+            {/* FIRST ROW */}
+            <FlexBetween
+                gap="0.5rem"
+                pb="1.1rem"
+                onClick={() => navigate(`/profile/${userId}`)}
+            >
+                <FlexBetween gap="1rem">
+                    <UserImage image={picturePath} />
+                    <Box>
+                        <Typography
+                            variant="h4"
+                            color={dark}
+                            fontWeight="500"
+                            sx={{
+                                "&:hover": {
+                                    color: palette.primary.light,
+                                    cursor: "pointer"
+                                }
+                            }}>
+                                {firstName} {lastName}
+                        </Typography>
+                        <Typography color={medium}>
+                            {friends.length} friends
+                        </Typography>
+                    </Box>
+                    <ManageAccountsOutlined />
+                </FlexBetween>
+
+                <Divider />
+
+            </FlexBetween>
+        </WidgetWrapper>
+    )
 };
 
 export default UserWidget;
