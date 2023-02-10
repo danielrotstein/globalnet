@@ -33,7 +33,7 @@ const MyPostWidget = ({ picturePath }) => {
     const [post, setPost] = useState("");
     const { palette } = useTheme();
     const { _id } = useSelector((state) => state.user);
-    const { token } = useSelector((state) => state.token);
+    const token = useSelector((state) => state.token);
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
@@ -67,7 +67,7 @@ const MyPostWidget = ({ picturePath }) => {
                     placeholder="Share your thoughts..."
                     onChange={(e) => setPost(e.target.value)}
                     value={post}
-                    sw={{
+                    sx={{
                         width: "100%",
                         backgroundColor: palette.neutral.light,
                         borderRadius: "2rem",
@@ -170,6 +170,18 @@ const MyPostWidget = ({ picturePath }) => {
                         <MoreHorizOutlined sx={{ color: mediumMain }} />
                     </FlexBetween> 
                 )}
+
+                <Button
+                    disabled={!post}
+                    onClick={handlePost}
+                    sx={{
+                        color: palette.background.alt,
+                        backgroundColor: palette.primary.main,
+                        borderRadius: "3rem"
+                    }}
+                >
+                    POST
+                </Button>
             </FlexBetween>
         </WidgetWrapper>
     )
