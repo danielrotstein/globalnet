@@ -1,7 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
-import UserWidget from "scenes/Widgets/UserWidgets.jsx";
+import UserWidget from "../../scenes/Widgets/UserWidgets.jsx";
 import Navbar from "../Navbar/index.jsx";
 
 const HomePage = () => {
