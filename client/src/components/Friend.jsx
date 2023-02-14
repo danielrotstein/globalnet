@@ -42,7 +42,21 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
         const data = await response.json();
         dispatch(setFriends({ friends: data }));
     };
-
+    return (
+        <FlexBetween>
+            <FlexBetween gap="1rem">
+                <UserImage image={userPicturePath} size="55px" />
+                <Box 
+                    onClick={() => {
+                        navigate(`/profile/${friendId}`);
+                        navigate(0);
+                    }}
+                >
+                    
+                </Box>
+            </FlexBetween>
+        </FlexBetween>
+    )
 }
 
 export default Friend;
