@@ -30,26 +30,26 @@ const AdvertWidget = () => {
                 width="100%"
                 height="auto"
                 alt="advert"
-                src="http://localhost:3001/assets/info4.jpeg"
+                src="http://localhost:3001/assets/coding.jpeg"
                 style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
             />
             <FlexBetween>
                 <Typography 
                     color={main}
                 >
-                    MikaCosmetics
+                    Git Bootcamp
                 </Typography>
                 <Typography 
                     color={medium}
                 >
-                    mikacosmetics.com
+                    gitbootcamp.com
                 </Typography>
             </FlexBetween>
             <Typography
                 color={medium}
                 m="0.5rem 0"
             >
-                Your pathway to stunning beauty starts here
+                Your pathway to your new career in software engineering starts here!
             </Typography>
         </WidgetWrapper>
     );
