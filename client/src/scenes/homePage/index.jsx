@@ -5,6 +5,7 @@ import UserWidget from "../Widgets/UserWidget.jsx";
 import Navbar from "../Navbar/index.jsx";
 import MyPostWidget from "../../scenes/Widgets/MyPostWidget"
 import PostsWidget from "../../scenes/Widgets/PostsWidget.jsx";
+import AdvertWidget from "../../scenes/Widgets/AdvertWidget.jsx";
 
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -35,6 +36,7 @@ const HomePage = () => {
                 </Box>
                 {isNonMobileScreens && (
                     <Box flexBasis="26%">
+                        <AdvertWidget />
                     </Box>
                 )}
             </Box>
