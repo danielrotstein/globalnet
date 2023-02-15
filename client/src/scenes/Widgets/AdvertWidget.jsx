@@ -45,9 +45,14 @@ const AdvertWidget = () => {
                     mikacosmetics.com
                 </Typography>
             </FlexBetween>
+            <Typography
+                color={medium}
+                m="0.5rem 0"
+            >
+                Your pathway to stunning beauty starts here
+            </Typography>
         </WidgetWrapper>
-    )
-
-}
+    );
+};
 
 export default AdvertWidget;
