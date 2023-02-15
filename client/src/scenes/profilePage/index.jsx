@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Navbar from "../../scenes/Navbar";
 import FriendListWidget from "../../scenes/Widgets/FriendListWidget";
-import MyPostWidget from "../../scenes/Widgets/MyPostWidget";
+// import MyPostWidget from "../../scenes/Widgets/MyPostWidget";
 import PostsWidget from "../../scenes/Widgets/PostsWidget";
 import UserWidget from "../../scenes/Widgets/UserWidget";
 
@@ -57,7 +57,7 @@ const ProfilePage = () => {
                     flexBasis={isNonMobileScreens ? "42%" : undefined}
                     mt={isNonMobileScreens ? undefined : "2rem"}
                 >
-                    <MyPostWidget picturePath={user.picturePath} />
+                    {/* <MyPostWidget picturePath={user.picturePath} /> */}
                     <Box m="2rem 0" />
                     <PostsWidget userId={userId} isProfile />
                 </Box>
