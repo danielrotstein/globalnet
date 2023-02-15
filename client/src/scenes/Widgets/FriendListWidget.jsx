@@ -7,6 +7,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFriends } from "state";
+import { useNavigate } from "react-router-dom";
 
 const FriendListWidget = ({ userId }) => {
     const dispatch = useDispatch();
