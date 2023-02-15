@@ -108,9 +108,16 @@ const PostWidget = ({
                             {comments.length}
                         </Typography>
                     </FlexBetween>
-
                 </FlexBetween>
+                <IconButton>
+                    <ShareOutlined />
+                </IconButton>
             </FlexBetween>
+            {isComments && (
+                <Box>
+                    
+                </Box>
+            )}
         </WidgetWrapper>
     )
 
