@@ -114,13 +114,15 @@ const PostWidget = ({
                 </IconButton>
             </FlexBetween>
             {isComments && (
-                <Box>
-                    
+                <Box mt="0.5rem">
+                    {comments.map((comment, i) => (
+                        <Box key={`${name}-${i}`}>
+                        </Box>
+                    ))}
                 </Box>
             )}
         </WidgetWrapper>
     )
-
 }
 
 export default PostWidget;
