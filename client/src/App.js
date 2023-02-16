@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React from 'react'
-import HomePage from "scenes/HomePage/index";
+import HomePage from "git statscenes/HomePage/index";
 import LoginPage from "./scenes/LoginPage/index";
 import ProfilePage from "./scenes/ProfilePage/index";
 import { useMemo } from "react";
