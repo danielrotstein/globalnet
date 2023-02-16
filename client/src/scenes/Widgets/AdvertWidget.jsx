@@ -37,12 +37,12 @@ const AdvertWidget = () => {
                 <Typography 
                     color={main}
                 >
-                    Git Bootcamp
+                    CodeZilla Bootcamp
                 </Typography>
                 <Typography 
                     color={medium}
                 >
-                    gitbootcamp.com
+                    codezilla.com
                 </Typography>
             </FlexBetween>
             <Typography
