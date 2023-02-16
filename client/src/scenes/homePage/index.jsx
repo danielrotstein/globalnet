@@ -3,10 +3,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import UserWidget from "../Widgets/UserWidget.jsx";
 import Navbar from "../Navbar/index.jsx";
-import MyPostWidget from "../../scenes/Widgets/MyPostWidget"
-import PostsWidget from "../../scenes/Widgets/PostsWidget.jsx";
-import AdvertWidget from "../../scenes/Widgets/AdvertWidget.jsx";
-import FriendListWidget from "../../scenes/Widgets/FriendListWidget.jsx";
+import MyPostWidget from "../Widgets/MyPostWidget"
+import PostsWidget from "../Widgets/PostsWidget.jsx";
+import AdvertWidget from "../Widgets/AdvertWidget.jsx";
+import FriendListWidget from "../Widgets/FriendListWidget.jsx";
 
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
