@@ -21,7 +21,7 @@ export const colorTokens = {
       200: "#99EEFD",
       300: "#66E6FC",
       400: "#33DDFB",
-      500: "#673ab7",
+      500: "#F25E31",
       600: "#00A0BC",
       700: "#006B7D",
       800: "#00353F",
@@ -31,6 +31,8 @@ export const colorTokens = {
 
  // EXTRA COLORS
   // #ffa726 #F25E31 #673ab7
+// OG COLOR
+  // 00D5FA
   
   // mui theme settings
   export const themeSettings = (mode) => {
