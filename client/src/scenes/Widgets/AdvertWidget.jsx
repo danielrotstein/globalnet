@@ -21,7 +21,8 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src={process.env.PUBLIC_URL + "/assets/coding.jpeg"}
+        src="http://localhost:3001/assets/coding.jpeg"
+        // src={process.env.PUBLIC_URL + "/assets/coding.jpeg"}
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
