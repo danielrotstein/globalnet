@@ -21,7 +21,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/coding.jpeg"
+        src="assets/coding.jpeg"
         // src={process.env.PUBLIC_URL + "/assets/coding.jpeg"}
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
